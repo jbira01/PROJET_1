@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Véhicules - Location JS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vehicules.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nos Véhicules</h1>
+            <p>Trouvez la voiture parfaite pour votre voyage</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home-link">Accueil</a></li>
+            <li><a href="vehicules.html" id="cars-link">Nos Véhicules</a></li>
+            <li><a href="reservation.html" id="reservation-link">Réservation</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="filter-section">
+            <button class="filter-btn active" data-category="all">Tous</button>
+            <button class="filter-btn" data-category="compact">Compact</button>
+            <button class="filter-btn" data-category="berline">Berline</button>
+            <button class="filter-btn" data-category="suv">SUV</button>
+            <button class="filter-btn" data-category="luxe">Luxe</button>
+        </div>
+
+        <div class="vehicle-grid" id="vehicleGrid">
+            <!-- Les véhicules seront générés dynamiquement par JavaScript -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Location JS - Tous droits réservés</p>
+    </footer>
+
+    <script src="vehicules.js"></script>
+</body>
+</html>

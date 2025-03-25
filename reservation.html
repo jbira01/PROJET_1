@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Location Évasion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Réservation de Véhicule</h1>
+            <p>Personnalisez votre location</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home-link">Accueil</a></li>
+            <li><a href="vehicules.html" id="cars-link">Nos Véhicules</a></li>
+            <li><a href="reservation.html" id="reservation-link">Réservation</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="reservation-container">
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="pickupLocation">Lieu de Retrait</label>
+                    <select id="pickupLocation" required>
+                        <option value="">Sélectionnez un lieu</option>
+                        <option value="paris">Paris</option>
+                        <option value="lyon">Lyon</option>
+                        <option value="marseille">Marseille</option>
+                        <option value="nice">Nice</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Date et Durée</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" id="startDate" required style="flex: 1;">
+                        <select id="rentalDuration" required style="flex: 1;">
+                            <option value="">Durée</option>
+                            <option value="1">1 jour</option>
+                            <option value="3">3 jours</option>
+                            <option value="7">1 semaine</option>
+                            <option value="14">2 semaines</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3>Sélectionnez votre véhicule</h3>
+                <div class="vehicle-selection" id="vehicleSelection">
+                    <!-- Les véhicules seront générés dynamiquement -->
+                </div>
+
+                <div class="price-summary" id="priceSummary">
+                    <h4>Récapitulatif du Prix</h4>
+                    <p>Véhicule : <span id="selectedVehiclePrice">-</span></p>
+                    <p>Durée : <span id="rentalDurationDisplay">-</span></p>
+                    <p><strong>Total : <span id="totalPrice">-</span>€</strong></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Votre email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" required placeholder="Votre numéro de téléphone">
+                </div>
+
+                <button type="submit" class="submit-btn">Confirmer la Réservation</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Location JS - Tous droits réservés</p>
+    </footer>
+
+    <script src="reservation.js"></script>
+</body>
+</html>
