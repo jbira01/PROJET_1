@@ -4,84 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation - Location Évasion</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="reservation.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-4">
         <div class="container">
-            <h1>Réservation de Véhicule</h1>
-            <p>Personnalisez votre location</p>
+            <h1 class="display-5">Réservation de Véhicule</h1>
+            <p class="lead">Personnalisez votre location</p>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" id="home-link">Accueil</a></li>
-            <li><a href="vehicules.html" id="cars-link">Nos Véhicules</a></li>
-            <li><a href="reservation.html" id="reservation-link">Réservation</a></li>
-            <li><a href="contact.html" id="contact-link">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="home-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vehicules.html" id="cars-link">Nos Véhicules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reservation.html" id="reservation-link">Réservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" id="contact-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        <div class="reservation-container">
-            <form id="reservationForm">
-                <div class="form-group">
-                    <label for="pickupLocation">Lieu de Retrait</label>
-                    <select id="pickupLocation" required>
-                        <option value="">Sélectionnez un lieu</option>
-                        <option value="paris">Paris</option>
-                        <option value="lyon">Lyon</option>
-                        <option value="marseille">Marseille</option>
-                        <option value="nice">Nice</option>
-                    </select>
-                </div>
+    <!-- Reservation Container -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <form id="reservationForm">
+                            <div class="mb-3">
+                                <label for="pickupLocation" class="form-label">Lieu de Retrait</label>
+                                <select id="pickupLocation" class="form-select" required>
+                                    <option value="">Sélectionnez un lieu</option>
+                                    <option value="paris">Paris</option>
+                                    <option value="lyon">Lyon</option>
+                                    <option value="marseille">Marseille</option>
+                                    <option value="nice">Nice</option>
+                                </select>
+                            </div>
 
-                <div class="form-group">
-                    <label>Date et Durée</label>
-                    <div style="display: flex; gap: 10px;">
-                        <input type="date" id="startDate" required style="flex: 1;">
-                        <select id="rentalDuration" required style="flex: 1;">
-                            <option value="">Durée</option>
-                            <option value="1">1 jour</option>
-                            <option value="3">3 jours</option>
-                            <option value="7">1 semaine</option>
-                            <option value="14">2 semaines</option>
-                        </select>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Date de Début</label>
+                                    <input type="date" id="startDate" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Durée</label>
+                                    <select id="rentalDuration" class="form-select" required>
+                                        <option value="">Durée</option>
+                                        <option value="1">1 jour</option>
+                                        <option value="3">3 jours</option>
+                                        <option value="7">1 semaine</option>
+                                        <option value="14">2 semaines</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <h3 class="mb-3">Sélectionnez votre véhicule</h3>
+                            <div class="row g-3 mb-4" id="vehicleSelection">
+                                <!-- Les véhicules seront générés dynamiquement -->
+                            </div>
+
+                            <div class="card bg-light mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Récapitulatif du Prix</h4>
+                                    <div class="row">
+                                        <div class="col-6">Véhicule :</div>
+                                        <div class="col-6 text-end" id="selectedVehiclePrice">-</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">Durée :</div>
+                                        <div class="col-6 text-end" id="rentalDurationDisplay">-</div>
+                                    </div>
+                                    <hr>
+                                    <div class="row fw-bold">
+                                        <div class="col-6">Total :</div>
+                                        <div class="col-6 text-end"><span id="totalPrice">-</span>€</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" class="form-control" required placeholder="Votre email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Téléphone</label>
+                                    <input type="tel" id="phone" class="form-control" required placeholder="Votre numéro de téléphone">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirmer la Réservation</button>
+                        </form>
                     </div>
                 </div>
-
-                <h3>Sélectionnez votre véhicule</h3>
-                <div class="vehicle-selection" id="vehicleSelection">
-                    <!-- Les véhicules seront générés dynamiquement -->
-                </div>
-
-                <div class="price-summary" id="priceSummary">
-                    <h4>Récapitulatif du Prix</h4>
-                    <p>Véhicule : <span id="selectedVehiclePrice">-</span></p>
-                    <p>Durée : <span id="rentalDurationDisplay">-</span></p>
-                    <p><strong>Total : <span id="totalPrice">-</span>€</strong></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="Votre email">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Téléphone</label>
-                    <input type="tel" id="phone" required placeholder="Votre numéro de téléphone">
-                </div>
-
-                <button type="submit" class="submit-btn">Confirmer la Réservation</button>
-            </form>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Location JS - Tous droits réservés</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2024 Location JS - Tous droits réservés</p>
     </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <script src="reservation.js"></script>
 </body>
