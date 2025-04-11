@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARMOTORS - Contact</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/contact.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo ajouté à gauche -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/image.png" alt="Logo" height="60">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vehicules.html">Nos Véhicules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html">Réservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <div class="contact-hero text-center">
+        <div class="container">
+            <h1 class="display-4 mb-3">Contactez-nous</h1>
+            <p class="lead">Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+        </div>
+    </div>
+
+    <!-- Contact Info Section -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card contact-card text-center p-4">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt fa-2x text-dark"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Notre Adresse</h3>
+                    <p class="mb-1">123 Avenue Victor Hugo</p>
+                    <p>75016 Paris, France</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card contact-card text-center p-4">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt fa-2x text-dark"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Téléphone</h3>
+                    <p class="mb-1">Service client: 01 23 45 67 89</p>
+                    <p>Assistance: 01 23 45 67 90</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card contact-card text-center p-4">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope fa-2x text-dark"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Email</h3>
+                    <p class="mb-1">contact@carmotors.fr</p>
+                    <p>support@carmotors.fr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Envoyez-nous un message</h2>
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Téléphone</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <select class="form-select" id="subject" required>
+                            <option value="" selected disabled>Choisissez un sujet</option>
+                            <option value="reservation">Réservation</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="support">Support technique</option>
+                            <option value="partnership">Partenariat</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-dark">Envoyer le message</button>
+                </form>
+            </div>
+            
+            <div class="col-lg-6">
+                <h2 class="mb-4">Notre Emplacement</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13275.899328801352!2d-7.415734256617976!3d33.70960014505476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b5f7e9e47d53%3A0x9654682728f4590a!2sGET%20IN%20DRIVE%20Location%20Voitures%20Rent%20Cars%20Mohammedia!5e0!3m2!1sfr!2sma!4v1744411632615!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+                <div class="mt-4">
+                    <h3 class="h5 mb-3">Heures d'ouverture</h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Lundi - Vendredi:</strong> 9h00 - 19h00</li>
+                        <li><strong>Samedi:</strong> 10h00 - 17h00</li>
+                        <li><strong>Dimanche:</strong> Fermé</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container mb-5">
+        <h2 class="text-center mb-4">Questions Fréquentes</h2>
+        
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Comment puis-je réserver un véhicule ?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Vous pouvez réserver un véhicule en ligne via notre page de réservation, par téléphone ou directement dans notre agence. Il vous suffit de choisir les dates de location, le véhicule souhaité et de remplir vos coordonnées.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Quels documents sont nécessaires pour louer un véhicule ?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Pour louer un véhicule, vous devez présenter un permis de conduire valide depuis au moins 2 ans, une pièce d'identité et une carte bancaire à votre nom pour le dépôt de garantie.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Comment fonctionne l'assurance des véhicules ?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Tous nos véhicules sont assurés avec une couverture de base incluse dans le prix de location. Des options d'assurance complémentaires sont disponibles pour réduire ou supprimer la franchise en cas d'accident.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Est-il possible d'annuler ou de modifier ma réservation ?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Oui, vous pouvez annuler ou modifier votre réservation jusqu'à 48 heures avant la date de prise en charge du véhicule. Au-delà de ce délai, des frais peuvent s'appliquer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2024 CARMOTORS - Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+    
+</body>
+</html>

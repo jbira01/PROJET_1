@@ -13,6 +13,5 @@ document.getElementById('reservation-link').addEventListener('click', function(e
 });
 
 document.getElementById('contact-link').addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('Redirection vers la page de contact');
+    window.location.href = 'contact.html';
 });
