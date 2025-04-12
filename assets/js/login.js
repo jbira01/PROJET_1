@@ -21,5 +21,5 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
     
     console.log('Login attempt:', { email, password });
-    alert('Tentative de connexion avec: ' + email);
+    window.location.href = 'index.html'; // Redirect to the main page after login
 });
