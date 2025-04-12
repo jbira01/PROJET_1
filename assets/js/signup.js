@@ -40,7 +40,7 @@ function checkMatch() {
 }
 
 document.getElementById('signupForm').addEventListener('submit', (e) => {
-
+  e.preventDefault(); // Prevent form submission
   if (password.value !== confirmPassword.value) return alert("Les mots de passe ne correspondent pas.");
   if (!document.getElementById('agreeTerms').checked) return alert("Veuillez accepter les conditions.");
   window.location.href = 'login.html'; // Redirect to the main page after login
