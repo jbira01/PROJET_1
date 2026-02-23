@@ -7,6 +7,13 @@
 
 📊 GitHub Statistics
 
+![Repo Size](https://img.shields.io/github/repo-size/jbira01/PROJET_1)
+![Last Commit](https://img.shields.io/github/last-commit/jbira01/PROJET_1)
+![Top Language](https://img.shields.io/github/languages/top/jbira01/PROJET_1)
+![Language Count](https://img.shields.io/github/languages/count/jbira01/PROJET_1)
+![Stars](https://img.shields.io/github/stars/jbira01/PROJET_1?style=social)
+![Forks](https://img.shields.io/github/forks/jbira01/PROJET_1?style=social)
+
 
 ⸻
 
