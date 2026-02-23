@@ -1,80 +1,103 @@
-Here is a clean, professional README.md you can copy directly into your repository:
+⸻
+
+🚗 PROJET_1 – Car Rental Website (Static Version)
+
 
 ⸻
 
-🚗 PROJET_1 – Car Rental Website
+📊 GitHub Statistics
 
-📌 Overview
-
-PROJET_1 is a front-end web project for a car rental platform.
-It provides a modern and responsive interface where users can browse vehicles, create accounts, log in, and make reservations.
-
-This project was built as part of academic training to practice web development fundamentals.
 
 ⸻
 
-🎯 Features
+📖 Overview
+
+PROJET_1 is a front-end web application for a Car Rental Website developed using HTML, CSS, and JavaScript.
+
+This project represents the initial version of the car rental system before backend integration.
+It focuses on responsive design, clean UI structure, and user interaction.
+
+⸻
+
+✨ Key Features
 	•	🏠 Home page with presentation section
 	•	🚘 Vehicle listing page
-	•	📅 Reservation form
-	•	🔐 User authentication pages (Login & Sign Up)
+	•	📅 Reservation form interface
+	•	🔐 Login & Registration pages
 	•	📩 Contact page
-	•	📱 Responsive design
+	•	📱 Fully responsive layout
 
 ⸻
 
-🛠️ Technologies Used
-	•	HTML5 – Structure
-	•	CSS3 – Styling
-	•	JavaScript – Interactivity
-	•	Static assets (images, icons, etc.)
+🧰 Tech Stack
+
+Technology	Purpose
+HTML5	Structure
+CSS3	Styling & Layout
+JavaScript	Interactivity
+Static Assets	Images & UI Elements
+
 
 ⸻
 
-📂 Project Structure
+🗂️ Project Structure
 
 PROJET_1/
 │
-├── index.html          # Home page
-├── vehicules.html      # Vehicle listing page
-├── reservation.html    # Reservation page
-├── login.html          # Login page
-├── signup.html         # Registration page
-├── contact.html        # Contact page
+├── index.html
+├── vehicules.html
+├── reservation.html
+├── login.html
+├── signup.html
+├── contact.html
 │
-├── assets/             # CSS, JS, and other resources
-├── img/                # Images used in the website
-└── README.md           # Project documentation
+├── assets/
+├── img/
+│
+└── README.md
 
 
 ⸻
 
-🚀 How to Run the Project
-	1.	Clone the repository:
+🚀 Installation & Usage
+
+Clone the repository:
 
 git clone https://github.com/jbira01/PROJET_1.git
 
+Open the folder and launch:
 
-	2.	Open the project folder.
-	3.	Double-click on index.html
-or open it using a browser.
+index.html
 
-No server is required since this is a static website.
+No server required (static website).
+
+⸻
+
+📈 Project Evolution
+
+This project was later upgraded into a dynamic PHP & MySQL version:
+➡ PROJECT_2 – Car Rental Management System
 
 ⸻
 
 🔮 Future Improvements
-	•	Convert static pages to dynamic PHP
-	•	Connect to a MySQL database
-	•	Add admin dashboard
-	•	Implement real authentication system
+	•	Convert static pages to PHP
+	•	Connect to MySQL database
+	•	Add authentication system
+	•	Implement admin dashboard
 	•	Improve UI/UX design
-	•	Add payment integration
 
 ⸻
 
-👤 Author
+📄 License
+
+MIT License
+
+⸻
+
+👨‍💻 Author
 
 Yasser Jabir
+Full-Stack Developer
 
 ⸻
